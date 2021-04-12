@@ -18,12 +18,15 @@ Character::Character(string _name, int _health)
     //this->health = _health;
 }
 
+//https://stackoverflow.com/questions/781760/copy-constructor-with-pointers$
 Character::Character(const Character & other)
 : name(other.name), health(other.health)
 {
     cout << "Character '" << this->name << "' will be created. - copy" << endl;
     //this->name = other.name;
     //this->health = other.health;
+    this->weapon = nullptr;
+
     addWeapon(*other.weapon);
 }
 
