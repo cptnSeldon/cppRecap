@@ -34,6 +34,7 @@ Character::Character(const Character & other)
 Character::~Character()
 {
     cout << "~ Character '" << this->name << "' will be destroyed." << endl;
+    discardWeapon();
 }
 
 //FUNCTIONS
